@@ -11,10 +11,10 @@ Sonic-Search is designed to replace slow OS-native search with instant filename,
 
 ## ✨ Features (Roadmap)
 
-- **Phase 1: Filesystem Search** *(In Progress)*
-  - 🚀 Instant recursive filename search
-  - 📁 Respect `.gitignore` and hidden file rules
-  - ⚡ Parallel directory walking for maximum performance
+- **Phase 1: Filesystem Search** *(In Progress)* ✅
+  - ✅ Parallel directory walking for maximum performance
+  - ✅ Respect `.gitignore` and hidden file rules
+  - 🚧 Instant recursive filename search (coming soon)
 
 - **Phase 2: Content Indexing** *(Planned)*
   - 📄 Search inside file contents (Text, PDF, Docx)
@@ -50,20 +50,23 @@ cargo install --path .
 ### Usage Examples
 
 ```bash
-# Index a directory
-ss scan ~/Documents
+# Index a directory (✅ Working)
+cargo run -- scan ~/Documents
 
-# Find files by name
-ss find "budget"
+# Find files by name (🚧 Coming soon)
+cargo run -- find "budget"
 
-# Search inside file contents
-ss grep "target_profit"
+# Show statistics (🚧 Coming soon)
+cargo run -- stats
+
+# Search inside file contents (Phase 2)
+# ss grep "target_profit"
 
 # Semantic search (Phase 3)
-ss smart "travel plans"
+# ss smart "travel plans"
 
-# Launch interactive TUI
-ss ui
+# Launch interactive TUI (Phase 4)
+# ss ui
 ```
 
 ## 🛠️ Technical Stack
